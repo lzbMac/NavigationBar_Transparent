@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Test2ViewController">
+            <connections>
+                <outlet property="btnBack" destination="dH6-9B-fcy" id="SEo-X1-G4I"/>
+                <outlet property="tableView" destination="VDl-vI-CfZ" id="WUH-5L-jLJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VDl-vI-CfZ">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="wZM-pJ-tca"/>
+                        <outlet property="delegate" destination="-1" id="oeK-8V-qmy"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="VDl-vI-CfZ" secondAttribute="trailing" id="O7C-yq-0I2"/>
+                <constraint firstAttribute="bottom" secondItem="VDl-vI-CfZ" secondAttribute="bottom" id="cS1-V4-8EP"/>
+                <constraint firstItem="VDl-vI-CfZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cVS-5x-8Co"/>
+                <constraint firstItem="VDl-vI-CfZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="u5i-js-h5B"/>
+            </constraints>
+        </view>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dH6-9B-fcy">
+            <rect key="frame" x="0.0" y="0.0" width="45" height="38"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <state key="normal" image="back"/>
+            <connections>
+                <action selector="popBack:" destination="-1" eventType="touchUpInside" id="xgE-EM-3Nw"/>
+            </connections>
+            <point key="canvasLocation" x="-255.5" y="-47"/>
+        </button>
+    </objects>
+    <resources>
+        <image name="back" width="12" height="23"/>
+    </resources>
+</document>
