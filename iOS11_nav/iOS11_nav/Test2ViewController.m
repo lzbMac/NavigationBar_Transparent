@@ -77,7 +77,7 @@
     Test1ViewController *test = [[Test1ViewController alloc] init];
     UIColor *navColor = _colors[indexPath.row];
     if ([navColor isKindOfClass:[UIColor class]]) {
-//        test.navigationBarColor = navColor;
+        test.navigationBarColor = navColor;
     }
     [self.navigationController pushViewController:test animated:YES];
 }
